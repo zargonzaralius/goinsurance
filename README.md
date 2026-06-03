@@ -1,6 +1,6 @@
 # GoInsurance — IUL Landing Page
 
-**Live URL:** [goinsurance.integralifegroup.com](https://goinsurance.integralifegroup.com)
+**Live URL:** [appt.integralifegroup.com](https://appt.integralifegroup.com)
 
 This repository contains the IUL (Indexed Universal Life) landing page for Kyle Kirschbaum, Licensed Insurance Professional (Lic #21784350).
 

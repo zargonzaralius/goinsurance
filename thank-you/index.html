@@ -218,6 +218,84 @@ src="https://www.facebook.com/tr?id=1657160935567758&ev=Schedule&noscript=1"
     </div>
   </div>
 
+  <!-- ===== FREE GIFT / EBOOK SECTION ===== -->
+  <div class="gift-section">
+    <style>
+      .gift-section {
+        --gold-soft: #f4b658; --gold-deep: #cf841f; --rust: #b5431f;
+        --ink: #1b1b1b; --body: #6e6e6e; --line: #eae2d6;
+        font-family: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      }
+      .gift {
+        position: relative; max-width: 760px; margin: 48px auto 0;
+        background: linear-gradient(180deg, #fffaf1, #fff);
+        border: 1px solid #ecca84; border-radius: 24px; padding: 36px 40px;
+        display: flex; align-items: center; gap: 36px;
+        box-shadow: 0 30px 70px -34px rgba(60,36,10,.5); overflow: visible;
+      }
+      .gift-eyebrow {
+        display: inline-flex; align-items: center; gap: 9px; margin-bottom: 10px; white-space: nowrap;
+        font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--rust);
+      }
+      .gift-eyebrow svg { width: 16px; height: 16px; }
+      .gift-cover { position: relative; flex: none; width: 188px; }
+      .gift-cover img {
+        display: block; width: 100%; border-radius: 8px;
+        box-shadow: 0 18px 36px -12px rgba(20,30,60,.55), 0 2px 0 rgba(255,255,255,.4) inset;
+        transform: rotate(-2deg); transition: transform .2s;
+      }
+      .gift:hover .gift-cover img { transform: rotate(-2deg) translateY(-3px); }
+      .gift-sticker {
+        position: absolute; top: -18px; right: -22px; z-index: 3;
+        width: 84px; height: 84px; border-radius: 50%;
+        background: radial-gradient(circle at 35% 30%, var(--gold-soft), var(--gold-deep));
+        color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center;
+        font-weight: 800; text-transform: uppercase; line-height: 1; text-align: center;
+        box-shadow: 0 12px 26px -8px rgba(207,132,31,.7); transform: rotate(12deg);
+        border: 3px dashed rgba(255,255,255,.85);
+      }
+      .gift-sticker .s1 { font-size: 16px; letter-spacing: .5px; }
+      .gift-sticker .s2 { font-size: 13px; letter-spacing: 1.5px; margin-top: 2px; }
+      .gift-body { flex: 1; text-align: left; }
+      .gift-body h3 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(24px, 3.4vw, 30px); font-weight: 700; color: var(--ink); margin: 0 0 8px; letter-spacing: -.3px; }
+      .gift-body h3 em { font-style: italic; color: var(--rust); }
+      .gift-body p { font-size: 15.5px; line-height: 1.6; color: var(--body); margin: 0 0 20px; }
+      .gift-btn {
+        display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
+        font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 14.5px; letter-spacing: 1px; text-transform: uppercase;
+        color: #fff; text-decoration: none; padding: 15px 28px; border: 0; border-radius: 13px; white-space: nowrap;
+        background: linear-gradient(135deg, var(--gold-soft), var(--gold-deep));
+        box-shadow: 0 16px 30px -10px rgba(207,132,31,.6); transition: transform .15s, box-shadow .15s;
+      }
+      .gift-btn:hover { transform: translateY(-2px); box-shadow: 0 22px 38px -12px rgba(207,132,31,.7); }
+      .gift-btn svg { width: 18px; height: 18px; }
+      @media (max-width: 760px) {
+        .gift { flex-direction: column; text-align: center; padding: 30px 24px; }
+        .gift-body { text-align: center; }
+        .gift-cover { width: 168px; }
+      }
+    </style>
+
+    <div class="gift">
+      <div class="gift-cover">
+        <div class="gift-sticker"><span class="s1">Free</span><span class="s2">Gift</span></div>
+        <img src="ebook-cover.png" alt="IUL's Made Simple — free eBook" />
+      </div>
+      <div class="gift-body">
+        <div class="gift-eyebrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v10H4V12"/><path d="M2 7h20v5H2z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+          A gift, just for you
+        </div>
+        <h3>Get my free eBook: <em>IUL's Made Simple</em></h3>
+        <p>Protection, growth &amp; retirement &mdash; explained in plain English. Download your free copy and read it before our call so you can come prepared with questions.</p>
+        <a href="https://assets.cdn.filesafe.space/9ffE9FHxOAxLp04s1ZfL/media/6a20f5d2da24932f12014ae7.pdf" class="gift-btn" id="giftDownload" target="_blank" rel="noopener" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
+          Download My Free eBook
+        </a>
+      </div>
+    </div>
+  </div>
+
   <!-- benefits -->
   <div class="benefits-head">
     <h2>Why an <span class="gold-i">IUL</span> works so well</h2>

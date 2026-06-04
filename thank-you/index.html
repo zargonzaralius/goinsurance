@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>You're Booked! — Kyle Kirschbaum</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700;1,800&family=Dancing+Script:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1657160935567758');
+fbq('track', 'PageView');
+fbq('track', 'Schedule');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1657160935567758&ev=Schedule&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+  :root {
+    --gold: #e0a83d;
+    --gold-soft: #f4b658;
+    --gold-deep: #cf841f;
+    --rust: #b5431f;
+    --blue: #2c6ce0;
+    --blue-soft: #5a93f0;
+    --cream: #f8f4ef;
+    --ink: #1b1b1b;
+    --body: #6e6e6e;
+    --tint: #f3ede4;
+    --tint-2: #faf7f2;
+    --line: #eae2d6;
+    --serif: 'Playfair Display', Georgia, serif;
+    --script: 'Dancing Script', cursive;
+    --sans: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; font-family: var(--sans); color: var(--ink);
+    background: var(--cream);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+  }
+
+  .bg {
+    position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    background: radial-gradient(115% 80% at 50% 42%, #ffffff 0%, #fdfcfa 40%, #f8f3ec 78%, #f4efe7 100%);
+  }
+  .bg::before {
+    content: ""; position: absolute; inset: 0;
+    background:
+      radial-gradient(34% 26% at 88% 4%, rgba(240,168,60,.16), transparent 70%),
+      radial-gradient(30% 24% at 6% 96%, rgba(181,67,31,.06), transparent 70%);
+  }
+
+  .wrap {
+    position: relative; z-index: 1;
+    max-width: 640px; margin: 0 auto; padding: 40px 26px;
+    display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0;
+  }
+
+  .check-circle {
+    width: 80px; height: 80px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold-soft), var(--gold-deep));
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 16px 40px -12px rgba(207,132,31,.55);
+    margin-bottom: 28px;
+  }
+  .check-circle svg { width: 40px; height: 40px; color: #fff; }
+
+  .pill {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: #fff; border: 1px solid var(--line);
+    color: var(--rust); border-radius: 999px; padding: 10px 22px;
+    font-size: 13px; font-weight: 700; letter-spacing: .2px;
+    box-shadow: 0 4px 14px -8px rgba(120,80,40,.35); margin-bottom: 22px;
+  }
+  .pill-dot { flex: none; width: 9px; height: 9px; border-radius: 50%; background: var(--rust); box-shadow: 0 0 0 4px rgba(181,67,31,.14); }
+
+  h1 {
+    font-family: var(--serif); font-weight: 700; color: var(--ink);
+    font-size: clamp(30px, 5vw, 46px); line-height: 1.1; letter-spacing: -.5px;
+    margin: 0 0 18px;
+  }
+  h1 .script { font-family: var(--script); color: var(--rust); font-weight: 700; font-size: 1.1em; }
+
+  .lede {
+    font-size: clamp(15px, 2vw, 18px); line-height: 1.6; color: var(--body);
+    max-width: 520px; margin: 0 0 32px;
+  }
+  .lede strong { color: var(--ink); font-weight: 700; }
+
+  .card {
+    width: 100%; background: #fff; border: 1px solid var(--line);
+    border-radius: 20px; padding: 28px 30px;
+    box-shadow: 0 24px 60px -28px rgba(8,21,48,.35);
+    margin-bottom: 28px; text-align: left;
+  }
+  .card-title {
+    font-size: 11px; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase;
+    color: #9aa6bd; margin: 0 0 16px;
+  }
+  .step { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 18px; }
+  .step:last-child { margin-bottom: 0; }
+  .step-num {
+    flex: none; width: 32px; height: 32px; border-radius: 10px;
+    background: linear-gradient(135deg, var(--gold-soft), var(--gold-deep));
+    color: #fff; font-weight: 800; font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 6px 14px -6px rgba(207,132,31,.5);
+  }
+  .step-text b { display: block; font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 2px; }
+  .step-text span { font-size: 13.5px; color: var(--body); line-height: 1.5; }
+
+  .cell {
+    width: 100%; display: flex; align-items: center; gap: 14px;
+    background: #fff; border: 1px solid var(--line); border-radius: 14px;
+    padding: 16px 20px; margin-bottom: 28px;
+    box-shadow: 0 8px 24px -16px rgba(120,80,40,.35);
+  }
+  .cell .ph {
+    flex: none; width: 40px; height: 40px; border-radius: 11px;
+    background: linear-gradient(135deg, var(--gold-soft), var(--gold-deep)); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .cell .ph svg { width: 20px; height: 20px; }
+  .cell span { font-size: 14px; line-height: 1.5; color: var(--body); }
+  .cell b { color: var(--ink); font-weight: 700; }
+
+  .cta {
+    display: inline-flex; align-items: center; gap: 11px; cursor: pointer;
+    font-family: var(--sans); font-weight: 700; font-size: 14px; letter-spacing: 1.2px; text-transform: uppercase;
+    color: #fff; text-decoration: none; padding: 16px 32px; border: 0; border-radius: 13px;
+    background: linear-gradient(135deg, var(--blue-soft), var(--blue));
+    box-shadow: 0 16px 30px -10px rgba(44,108,224,.5); transition: transform .15s, box-shadow .15s;
+  }
+  .cta:hover { transform: translateY(-2px); box-shadow: 0 22px 38px -12px rgba(44,108,224,.65); }
+
+  footer { margin-top: 40px; text-align: center; color: var(--body); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; }
+  footer .dot { color: var(--rust); margin: 0 8px; }
+</style>
+</head>
+<body>
+<div class="bg"></div>
+
+<div class="wrap">
+
+  <div class="check-circle">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12"/>
+    </svg>
+  </div>
+
+  <div class="pill"><span class="pill-dot"></span>APPOINTMENT CONFIRMED</div>
+
+  <h1>You're <span class="script">Booked!</span></h1>
+
+  <p class="lede">Your call with Kyle is confirmed. <strong>Check your email for the calendar invite</strong> with all the details. Here's what to expect next.</p>
+
+  <div class="card">
+    <p class="card-title">What Happens Next</p>
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-text">
+        <b>Check Your Email</b>
+        <span>You'll receive a confirmation email with your appointment details and a calendar invite.</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-text">
+        <b>Be Ready to Talk Numbers</b>
+        <span>Think about your monthly budget and what you want your money to do — grow, protect, or both.</span>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-text">
+        <b>Show Up & Get Answers</b>
+        <span>Kyle will walk you through everything — no pressure, just clarity on whether an IUL is right for you.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="cell">
+    <div class="ph">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
+      </svg>
+    </div>
+    <span>Questions before your call? Text Kyle anytime at <b>702-677-1497</b> — he'll get back to you fast.</span>
+  </div>
+
+  <a href="https://appt.integralifegroup.com" class="cta">
+    ← Back to Main Page
+  </a>
+
+  <footer>© 2026 Kyle Kirschbaum <span class="dot">·</span> Licensed Insurance Professional <span class="dot">·</span> Lic #21784350</footer>
+
+</div>
+</body>
+</html>

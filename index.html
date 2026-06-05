@@ -326,7 +326,7 @@ src="https://www.facebook.com/tr?id=1657160935567758&ev=PageView&noscript=1"
   <section class="hero">
     <div class="pill"><span class="pill-dot"></span>IMPORTANT: WATCH THIS VIDEO</div>
 
-    <h1>Special Message You Need To Understand About <span class="gold-i">IULs.</span></h1>
+    <h1 id="page-headline">Special Message You Need To Understand About <span class="gold-i">IULs.</span></h1>
 
     <p class="lede">If you are serious about protecting yourself, growing your money safely, having access to your funds and and building tax-free retirement. </p>
 
@@ -343,7 +343,7 @@ src="https://www.facebook.com/tr?id=1657160935567758&ev=PageView&noscript=1"
   <!-- booking -->
   <section class="booksec" id="book">
     <div class="book-head">
-      <h2>Let's Find a <span class="script">Time</span> That Works For You</h2>
+      <h2 id="book-headline">Let's Find a <span class="script">Time</span> That Works For You</h2>
     </div>
 
     <div class="cell">
@@ -577,5 +577,22 @@ src="https://www.facebook.com/tr?id=1657160935567758&ev=PageView&noscript=1"
 })();
 </script>
 <!-- IUL EXIT POPUP — END -->
+<script>
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var fname = params.get('fname');
+  if (!fname) return;
+  fname = fname.charAt(0).toUpperCase() + fname.slice(1).toLowerCase();
+  // Headline
+  var h1 = document.getElementById('page-headline');
+  if (h1) h1.innerHTML = 'Hey ' + fname + ', watch this special message about <span class="gold-i">IULs.</span>';
+  // Booking section
+  var bh = document.getElementById('book-headline');
+  if (bh) bh.innerHTML = fname + ', book your free call below.';
+  // Exit popup
+  var xpTitle = document.getElementById('iul-xp-title');
+  if (xpTitle) xpTitle.innerHTML = fname + ', please don\'t make this <i>mistake.</i>';
+})();
+</script>
 </body>
 </html>

@@ -195,7 +195,7 @@ src="https://www.facebook.com/tr?id=1657160935567758&ev=Schedule&noscript=1"
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
     </div>
     <div class="eyebrow">Your Appointment Is Confirmed</div>
-    <h1>You&rsquo;re all set &mdash; <span class="script">thank you!</span></h1>
+    <h1 id="ty-headline">You&rsquo;re all set &mdash; <span class="script">thank you!</span></h1>
     <p class="lede">Your call is booked and on my calendar. <strong>I look forward to speaking with you</strong> and answering every question you have.</p>
   </section>
 
@@ -397,6 +397,16 @@ src="https://www.facebook.com/tr?id=1657160935567758&ev=Schedule&noscript=1"
       });
     }
   })();
+</script>
+<script>
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var fname = params.get('fname');
+  if (!fname) return;
+  fname = fname.charAt(0).toUpperCase() + fname.slice(1).toLowerCase();
+  var h1 = document.getElementById('ty-headline');
+  if (h1) h1.innerHTML = fname + ', you\'re all set &mdash; <span class="script">thank you!</span>';
+})();
 </script>
 </body>
 </html>
